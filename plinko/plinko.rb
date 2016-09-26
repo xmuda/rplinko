@@ -1,5 +1,5 @@
 module Plinko
-  DAEMON="./clamd"
+  DAEMON="~/clam-*/bin/clamd"
   CHANGE="xCNR1AUJZBRWF1uCFdqvWtD2hsYk2fitcT"
   LINES={
     "xSFbh3pzpBrdfUtkN9JgSEW4f83LrjaHJv" => [0.2,0.2,0.2,2,4,9,24,130,999]
