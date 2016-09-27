@@ -24,7 +24,7 @@ module Plinko
     def broadcast!
       return self if broadcast?
       tx = {@payto=>(@payout-FEE).round(8)}
-      tx << {CHANGE=>(@sum-sendval).round(8)} if @sum-MINCHANGE>sendval
+      tx[CHANGE]=(@sum-sendval).round(8) if @sum-MINCHANGE>sendval
       @txid = Daemon.send(@coins,tx)
       self
     end
