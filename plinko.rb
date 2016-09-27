@@ -1,13 +1,8 @@
 #!/usr/bin/env ruby
-require 'highlander'
 require 'date'
 require './plinko/plinko'
 
 if __FILE__ == $0
-   if %x{ps -A | grep clamd | cut -d " " -f8}.include? ""
-    %x{sleep 3; ~/clam-*/bin/clamd -blocknotify=./plinko.rb}
-    abort
-  end
   secrethash = Digest::SHA256.hexdigest("just dice is filled with pole smokers:#{Date.new}")
   unplayed, hotwallet = [], []
   list = Plinko::Daemon.unspent
