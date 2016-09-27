@@ -12,6 +12,6 @@ end
 
 require 'json'
 require 'digest'
-require './daemon'
-require './bet'
-require './payment'
+require './plinko/daemon'
+require './plinko/bet'
+require './plinko/payment'
